@@ -12,15 +12,17 @@ i18n
   .init({
     fallbackLng, // default language
     detection: {
+      order: ["querystring", "navigator", "htmlTag", "path", "subdomain"], // Order of detection methods
+      caches: ["localStorage", "cookie"], // Cache detected language
       checkWhitelist: true,
     },
     debug: false,
     interpolation: {
       escapeValue: false, // no need for react. it escapes by default
     },
-    backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
-    },
+    // backend: {
+    //   loadPath: "/locales/{{lng}}/{{ns}}.json",
+    // },
   });
 
 export default i18n;
