@@ -20,10 +20,10 @@ export default function Header() {
     <>
       <nav className="navbar navbar-light bg-light">
         <div className="container">
-          <a href="#" className="navbar-brand">
+          <span className="navbar-brand">
             <img src={logo} alt="logo" width="50" height="50" />
             {t("Title")}
-          </a>
+          </span>
           <div className="d-flex">
             <select
               className="form-select"
