@@ -81,4 +81,10 @@ h5{
             cursor: pointer;
         } 
     }
+
+    .div2equal{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
 }

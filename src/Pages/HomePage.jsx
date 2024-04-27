@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Components/Header";
+import HourlyForecast from "../Components/HourlyForecast";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
@@ -55,42 +56,14 @@ export default function HomePage() {
           </div>
 
           <div className="col-md-7">
-            <div className="forecast">
-              <h4><FontAwesomeIcon icon={faClock} /> Hourly Forecast</h4>
-              <hr />
-              <div className="item">
-                <div className="itm active">
-                  <p>Now</p>
-                  <p>28 &deg;</p>
-                  <FontAwesomeIcon icon={faCloud} />
-                </div>
-                <div className="itm">
-                  <p>Now</p>
-                  <p>28 &deg;</p>
-                  <FontAwesomeIcon icon={faCloud} />
-                </div>
-                <div className="itm">
-                  <p>Now</p>
-                  <p>28 &deg;</p>
-                  <FontAwesomeIcon icon={faCloud} />
-                </div>
-                <div className="itm">
-                  <p>Now</p>
-                  <p>28 &deg;</p>
-                  <FontAwesomeIcon icon={faCloud} />
-                </div>
-                <div className="itm">
-                  <p>Now</p>
-                  <p>28 &deg;</p>
-                  <FontAwesomeIcon icon={faCloud} />
-                </div>
-                <div className="itm">
-                  <p>Now</p>
-                  <p>28 &deg;</p>
-                  <FontAwesomeIcon icon={faCloud} />
-                </div>
-              </div>
-              <hr />
+            <HourlyForecast />
+
+            <br />
+            
+
+            <br />
+            <div className="div2equal">
+              .
             </div>
           </div>
         </div>
