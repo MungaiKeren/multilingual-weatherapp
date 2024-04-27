@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useContext} from "react";
 import Header from "../Components/Header";
 import HourlyForecast from "../Components/HourlyForecast";
+import TendayForecast from "../Components/TendayForecast";
 import { useTranslation } from "react-i18next";
+import { WeatherContext } from "./WeatherContext";
+import { WeatherProvider } from "./WeatherContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faLocationDot, 
-  faTemperatureThreeQuarters, faClock, faCloud } from "@fortawesome/free-solid-svg-icons";
+  faTemperatureThreeQuarters} from "@fortawesome/free-solid-svg-icons";
 
 
 export default function HomePage() {
   const { t } = useTranslation();
   const lng = navigator.language;
 
+  const  weatherData = useContext(WeatherContext);
+  const  loading = useContext(WeatherContext);
+  const  error = useContext(WeatherContext);
+
+
   return (
-    <>
+    <WeatherProvider>
       <Header />
 
       <div className="container card my-5">
@@ -23,7 +31,9 @@ export default function HomePage() {
               <h5><FontAwesomeIcon className="text-muted" icon={faLocationDot} />&nbsp;
                 <span className="text-muted">Nairobi, Kenya</span></h5>
             </div>
-
+            {console.log("Weather data:", weatherData)}
+            {console.log("Loading:", loading)}
+            {console.log("Error:", error)}
             <div className="summary-box">
               <div className="temp text-center">
                 <h1>28&deg;</h1>
@@ -57,17 +67,27 @@ export default function HomePage() {
 
           <div className="col-md-7">
             <HourlyForecast />
-
             <br />
-            
-
+            <TendayForecast />
             <br />
             <div className="div2equal">
-              .
+              <div className="box-item">
+                <p><FontAwesomeIcon icon={faTemperatureThreeQuarters} /> UV Index</p>
+                <p>3</p>
+                <p>Moderate</p>
+                <p>Sun protection till 1600</p>
+              </div>
+
+              <div className="box-item">
+                <p><FontAwesomeIcon icon={faTemperatureThreeQuarters} /> UV Index</p>
+                <p>3</p>
+                <p>Moderate</p>
+                <p>Sun protection till 1600</p>
+              </div>  
             </div>
           </div>
         </div>
       </div>
-    </>
+    </WeatherProvider>
   );
 };
