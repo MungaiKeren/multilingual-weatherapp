@@ -11,7 +11,6 @@ import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
-  faTemperatureThreeQuarters,
   faCloudRain,
   faLocationArrow,
   faGaugeHigh
@@ -132,7 +131,7 @@ export default function HomePage() {
                       : "Breezy"}
                   </p>
                 </div>
-                <div className="other">
+                <div className="details">
                   <div>
                     <span>
                       <FontAwesomeIcon icon={faCloudRain} />{" "}
@@ -155,32 +154,14 @@ export default function HomePage() {
                 </div>
               </div>
             )}
+
+            
           </div>
   
           <div className="col-md-7 mt-4">
-            <HourlyForecast />
+            <HourlyForecast mToKM={mToKM}/>
             <br />
             <TendayForecast />
-            <br />
-            <div className="div2equal">
-              <div className="box-item">
-                <p>
-                  <FontAwesomeIcon icon={faTemperatureThreeQuarters} /> UV Index
-                </p>
-                <p>3</p>
-                <p>Moderate</p>
-                <p>Sun protection till 1600</p>
-              </div>
-
-              <div className="box-item">
-                <p>
-                  <FontAwesomeIcon icon={faTemperatureThreeQuarters} /> UV Index
-                </p>
-                <p>3</p>
-                <p>Moderate</p>
-                <p>Sun protection till 1600</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -189,19 +170,3 @@ export default function HomePage() {
   
 }
 
-const BoxItem = (props) => {
-  return (
-    <>
-      {props.temp ? (
-        <div className="box">
-          <p>
-            <FontAwesomeIcon icon={props.icon} /> {props.aspect}
-          </p>
-          <p>{props.temp}</p>
-        </div>
-      ) : (
-        <Loading />
-      )}
-    </>
-  );
-};
