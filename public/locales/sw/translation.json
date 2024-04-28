@@ -1,6 +1,14 @@
 {
   "Title": "Programu ya hali ya hewa",
-  "hello": "Habari",
-  "cancel": "Ghairi",
-  "continue": "Endelea"
+  "Error": "Hitilafu katika kuleta data ya hali ya hewa. Tafadhali jaribu tena baadae.",
+  "Hourly": "Utabiri wa Kila Saa",
+  "8-days": "Utabiri wa Siku 8",
+  "Feels-Like": "Inahisi Kama",
+  "Humidity": "Humidity",
+  "Wind": "Wind",
+  "Pressure": "Pressure",
+  "Visibility": "Visibility",
+  "Sunrise": "Sunrise",
+  "Sunset": "Sunset",
+  "Dew point": "Dew point"
 }

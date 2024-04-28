@@ -1,6 +1,14 @@
 {
   "Title": "Weather App",
-  "hello": "Hello",
-  "cancel": "Cancel",
-  "continue": "Continue"
+  "Error": "Error fetching weather data. Please try again later.",
+  "Hourly": "Hourly Forecast",
+  "8-days": "8-days Forecast",
+  "Feels-Like": "Feels Like",
+  "Humidity": "Humidity",
+  "Wind": "Wind",
+  "Pressure": "Pressure",
+  "Visibility": "Visibility",
+  "Sunrise": "Sunrise",
+  "Sunset": "Sunset",
+  "Dew point": "Dew point"
 }

@@ -10,10 +10,12 @@ import {
   faGaugeHigh,
 } from "@fortawesome/free-solid-svg-icons";
 import Loading from "./Loading";
+import { useTranslation } from "react-i18next";
 
 export default function DailyForecast(props) {
   const { weatherData, error } = useContext(WeatherContext);
 
+  const { t } = useTranslation();
   const dailyForecasts = weatherData?.daily;
   const [active, setActive] = useState(1)
 
@@ -73,7 +75,7 @@ export default function DailyForecast(props) {
   return (
     <div className="daily-forecast">
       <h4>
-        <FontAwesomeIcon icon={faCalendarDay} /> 8-Day Forecast
+        <FontAwesomeIcon icon={faCalendarDay} /> {t("8-days")}
       </h4>
       <hr />
 

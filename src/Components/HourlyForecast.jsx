@@ -8,10 +8,13 @@ import {
   faGaugeHigh,
 } from "@fortawesome/free-solid-svg-icons";
 import Loading from "./Loading";
+import { useTranslation } from "react-i18next";
 
 export default function HourlyForecast(props) {
   const { weatherData, error } = useContext(WeatherContext);
   const [active, setActive] = useState(null);
+
+  const { t } = useTranslation()
 
   const hourlyForecasts = weatherData?.hourly.slice(0, 6);
 
@@ -39,7 +42,7 @@ export default function HourlyForecast(props) {
   return (
     <div className="hourly-forecast">
       <h4>
-        <FontAwesomeIcon icon={faClock} /> Hourly Forecast
+        <FontAwesomeIcon icon={faClock} /> {(t("Hourly"))}
       </h4>
       <hr />
       <div className="item">
@@ -66,7 +69,7 @@ export default function HourlyForecast(props) {
           })
         ) : error ? (
           <p className="text-danger">
-            Error fetching weather data. Please try again later.
+            {t("Error")}
           </p>
         ) : (
           <Loading />
@@ -76,7 +79,7 @@ export default function HourlyForecast(props) {
       {active && (
         <div className="details">
           <div>
-            <span>Feels like: {hourlyForecasts[active].feels_like} &deg;</span>
+            <span>{t("Feels-Like")}: {hourlyForecasts[active].feels_like} &deg;</span>
             <span>
               <FontAwesomeIcon icon={faCloudRain} />&nbsp;&nbsp;
               {hourlyForecasts[active].rain["1h"]}

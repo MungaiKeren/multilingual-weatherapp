@@ -18,7 +18,6 @@ import {
 
 export default function HomePage() {
   const { t } = useTranslation();
-  const lng = navigator.language;
 
   const { weatherData, error } = useContext(WeatherContext);
 
@@ -102,7 +101,7 @@ export default function HomePage() {
                 </h5>
               </div>
             ) : error ? (
-              <p className="text-danger">Error fetching weather data. Please try again later.</p>
+              <p className="text-danger">{t("Error")}</p>
             ) : (
               <Loading />
             )}
@@ -119,7 +118,7 @@ export default function HomePage() {
                   </h1>
                   <p className="text-bold">
                     {" "}
-                    Feels like {Math.trunc(weatherData.current.feels_like)}&deg;
+                    {t("Feels-Like")} {Math.trunc(weatherData.current.feels_like)}&deg;
                     &nbsp;
                     {capitalize(weatherData.current.weather[0].description)}
                     .&nbsp;
