@@ -15,7 +15,7 @@ export default function DailyForecast(props) {
   const { weatherData, error } = useContext(WeatherContext);
 
   const dailyForecasts = weatherData?.daily;
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(1)
 
   function formatDate(timestamp) {
     const milliseconds = timestamp * 1000;
@@ -72,7 +72,6 @@ export default function DailyForecast(props) {
 
   return (
     <div className="daily-forecast">
-      {console.log(dailyForecasts)}
       <h4>
         <FontAwesomeIcon icon={faCalendarDay} /> 8-Day Forecast
       </h4>
@@ -89,7 +88,7 @@ export default function DailyForecast(props) {
                 <div
                   className={`itm ${isActive ? "active" : ""}`}
                   key={index}
-                  onClick={() => setActive(index)}
+                  onClick={() => setActive(isActive ? null : index)}
                 >
                   <p>{forecastTime}</p>
                   <p>

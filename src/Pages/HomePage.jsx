@@ -82,8 +82,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Header />  
-      {/* {console.log(weatherData)} */}
+      <Header />
       <div className="container card my-5">
         <ToastContainer />
         <div className="row p-3">

@@ -1,211 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import "./mediaqueries";
 @import "./variables";
 
-.top{
-    p{
-        color: orangered;
-        margin: 0;
+.container {
+    background: white;
+    opacity: 0.9;
+  .top {
+    p {
+      color: orangered;
+      margin: 0;
     }
-    h5{
-        // background: gainsboro;
-        // padding: 6px;
-        // border-radius: 10px;
-        // color: white;
-        // padding-left: 30px;
-    }
-}
+  }
 
-
-.summary-box{
+  .summary-box {
     background: gainsboro;
     border-radius: 10px;
     padding: 18px;
 
-    .temp{
-        text-align: center;
-        h1{
-            font-size: 5rem;
-            font-weight: 700;
-            font-family: 'Playfair Display', serif;            
-        }
-        .small{
-            font-size: smaller;
-        }
+    .temp {
+      text-align: center;
+      h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        font-family: "Playfair Display", serif;
+      }
+      .small {
+        font-size: smaller;
+      }
     }
 
-    .details{
-        display: grid;
-        gap: 5px;
-        padding-left: 20px;
-        border-left: 2px solid orangered;
+    .details {
+      display: grid;
+      gap: 5px;
+      padding-left: 20px;
+      border-left: 2px solid orangered;
     }
-}
+  }
 
-.hourly-forecast{
+  .hourly-forecast {
     background-color: rgba($color: #000000, $alpha: 0.7);
     color: white;
     padding: 18px;
     border-radius: 10px;
-    h4{
-        font-size: medium;
+    h4 {
+      font-size: medium;
     }
 
-    .item{
+    .item {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1em;
+
+      .itm {
+        text-align: center;
+        padding: 2px;
+        p:first-child {
+          margin: 0;
+        }
+        p:nth-child(2) {
+          font-size: x-large;
+          font-weight: 700;
+          font-family: "Playfair Display", serif;
+          margin: 0;
+        }
+      }
+      .active {
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        border-radius: 10px;
+      }
+      .itm:hover {
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+    .details {
+      display: grid;
+      gap: 5px;
+      padding-left: 20px;
+      border-left: 2px solid orangered;
+
+      div {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1em;
-
-        .itm{
-            text-align: center;
-            padding: 2px;
-            p:first-child{
-                margin: 0;
-            }
-            p:nth-child(2){
-                font-size: x-large;
-                font-weight: 700;
-                font-family: 'Playfair Display', serif; 
-                margin: 0;
-            }
-        } 
-        .active{
-            background-color: rgba($color: #fff, $alpha: 0.3);
-            border-radius: 10px;
-        }
-        .itm:hover{
-            background-color: rgba($color: #fff, $alpha: 0.3);
-            border-radius: 10px;
-            cursor: pointer;
-        } 
+      }
     }
-    .details{
-        display: grid;
-        gap: 5px;
-        padding-left: 20px;
-        border-left: 2px solid orangered;
+  }
 
-        div{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1em;
-        }
-    }
-}
-
-.div2equal{
+  .div2equal {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
 
-    .box-item{
-        background-color: rgba($color: #000000, $alpha: 0.7);
-        color: white;
-        border-radius: 10px;
-        padding: 18px;
+    .box-item {
+      background-color: rgba($color: #000000, $alpha: 0.7);
+      color: white;
+      border-radius: 10px;
+      padding: 18px;
 
-        p:nth-child(4){
-            margin: 0;
-        }
+      p:nth-child(4) {
+        margin: 0;
+      }
     }
-}
+  }
 
-.daily-forecast{
+  .daily-forecast {
     display: grid;
-    .itm{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1em;
+    .itm {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      align-items: center;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      p {
+        margin: 0;
+      }
+    }
+    .active {
+      background-color: rgba($color: gray, $alpha: 0.3);
+    }
+    .itm:hover {
+      background-color: rgba($color: gray, $alpha: 0.3);
+    }
+    .div1auto {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1em;
+      p {
+        margin: 0;
+        font-size: x-small;
+        color: gray;
+        text-align: right;
+      }
+    }
+
+    .additional-details {
+      .d-flex {
+        justify-content: center;
         align-items: center;
-        padding: 5px;
-        border-radius: 5px;
-        cursor: pointer;
-        p{
-            margin: 0;
+        p {
+          font-weight: 600;
         }
-    }
-    .active{
-        background-color: rgba($color: gray, $alpha: 0.3);
-    }
-    .itm:hover{
-        background-color: rgba($color: gray, $alpha: 0.3);
-    }
-    .div1auto{
+        p:nth-child(2) {
+          font-weight: 300;
+          font-size: smaller;
+        }
+      }
+      p {
+        margin: 0;
+      }
+      .details {
         display: grid;
-        grid-template-columns: 1fr auto;
+        gap: 5px;
+        padding-left: 20px;
+        border-left: 2px solid orangered;
+        width: 85%;
+        margin: auto;
+        div {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1em;
+
+          span {
+            font-weight: 300;
+            font-size: smaller;
+          }
+        }
+      }
+
+      .feels-like {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         gap: 1em;
-        p{
+        width: 90%;
+        margin: auto;
+        p {
+          margin: 0;
+          font-size: smaller;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+
+      .sun-status {
+        display: flex;
+        gap: 1em;
+        padding-left: 24px;
+        div {
+          p:first-child {
             margin: 0;
-            font-size: x-small;
-            color: gray;
-            text-align: right;
-        }    
-    }
-
-    .additional-details{
-        .d-flex{
-            justify-content: center;
-            align-items: center;
-            p{
-                font-weight: 600;
-            }
-            p:nth-child(2){
-                font-weight: 300;
-                font-size: smaller;
-            }
-        }
-        p{
+            font-size: smaller;
+            font-weight: 300;
+          }
+          p:nth-child(2) {
             margin: 0;
+            font-size: smaller;
+            font-weight: 400;
+          }
         }
-        .details{
-            display: grid;
-            gap: 5px;
-            padding-left: 20px;
-            border-left: 2px solid orangered;
-            width: 85%;
-            margin: auto;
-            div{
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1em;
-
-                span{
-                    font-weight: 300;
-                    font-size: smaller;
-                }
-            }
-        }
-
-        .feels-like{
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 1em;
-            width: 90%;
-            margin: auto;
-            p{
-                margin: 0;
-                font-size: smaller;
-                font-weight: 400;
-                text-align: center;
-            }
-        }
-
-        .sun-status{
-            display: flex;
-            gap: 1em;
-            padding-left: 24px;
-            div{
-                p:first-child{
-                    margin: 0;
-                    font-size: smaller;
-                    font-weight: 300;
-                }
-                p:nth-child(2){
-                    margin: 0;
-                    font-size: smaller;
-                    font-weight: 400;
-                }
-            }
-        }
+      }
     }
+  }
 }
