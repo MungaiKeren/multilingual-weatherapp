@@ -77,7 +77,7 @@ export default function HourlyForecast(props) {
       {active && (
         <div className="details">
           <div>
-            <span>Feel like: {hourlyForecasts[active].feels_like} &deg;</span>
+            <span>Feels like: {hourlyForecasts[active].feels_like} &deg;</span>
             <span>
               <FontAwesomeIcon icon={faCloudRain} />&nbsp;&nbsp;
               {hourlyForecasts[active].rain["1h"]}
