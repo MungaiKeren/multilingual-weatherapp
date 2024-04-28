@@ -204,4 +204,12 @@
       }
     }
   }
+
+  @include maxwidth(mobile) {
+    .hourly-forecast{
+        .item{
+            overflow-x: auto;
+        }
+    }
+  }
 }
