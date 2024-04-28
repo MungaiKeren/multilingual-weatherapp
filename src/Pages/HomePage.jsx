@@ -1,10 +1,13 @@
-import React, { useContext} from "react";
+import React, { useContext, useEffect} from "react";
+import { WeatherContext } from "../Components/Contexts/WeatherContext";
+
 import Header from "../Components/Header";
 import HourlyForecast from "../Components/HourlyForecast";
 import TendayForecast from "../Components/TendayForecast";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Loading from "../Components/Loading";
 import { useTranslation } from "react-i18next";
-import { WeatherContext } from "./WeatherContext";
-import { WeatherProvider } from "./WeatherContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faLocationDot, 
@@ -15,25 +18,68 @@ export default function HomePage() {
   const { t } = useTranslation();
   const lng = navigator.language;
 
-  const  weatherData = useContext(WeatherContext);
-  const  loading = useContext(WeatherContext);
-  const  error = useContext(WeatherContext);
+  const { weatherData, error } = useContext(WeatherContext);
+
+  useEffect(() => {
+    if (error) {
+      toast.error(error.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  }, [error]);
+
+  function formatUnixTimestamp(timestamp) {
+    // Convert Unix timestamp to milliseconds
+    const milliseconds = timestamp * 1000;
+  
+    // Create a new Date object
+    const date = new Date(milliseconds);
+  
+    // Define months array
+    const months = [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+  
+    // Get date components
+    const month = months[date.getMonth()];
+    const day = date.getDate();
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const ampm = hours >= 12 ? 'pm' : 'am';
+  
+    // Format the date
+    const formattedDate = `${month} ${day}, ${hours}:${minutes}${ampm}`;
+  
+    return formattedDate;
+  }
+
 
 
   return (
-    <WeatherProvider>
+    <>
+    {console.log(weatherData)}
       <Header />
 
       <div className="container card my-5">
+        <ToastContainer />
         <div className="row p-3">
-          <div className="col-md-5">
-            <div className="top">
-              <h5><FontAwesomeIcon className="text-muted" icon={faLocationDot} />&nbsp;
-                <span className="text-muted">Nairobi, Kenya</span></h5>
-            </div>
-            {console.log("Weather data:", weatherData)}
-            {console.log("Loading:", loading)}
-            {console.log("Error:", error)}
+          <div className="col-md-5"><Loading />
+            {weatherData ? (
+              <div className="top">
+                <p className="text-danger">{formatUnixTimestamp(weatherData?.current.dt)}</p>
+                <h5><FontAwesomeIcon className="text-muted" icon={faLocationDot} />&nbsp;&nbsp;
+                  <span className="text-muted">Nairobi, Kenya</span></h5>
+              </div>
+              )
+              : (<Loading />)}
+            
             <div className="summary-box">
               <div className="temp text-center">
                 <h1>28&deg;</h1>
@@ -88,6 +134,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-    </WeatherProvider>
+    </>
   );
 };
