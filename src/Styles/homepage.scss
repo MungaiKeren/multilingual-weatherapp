@@ -175,5 +175,37 @@
                 }
             }
         }
+
+        .feels-like{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1em;
+            width: 90%;
+            margin: auto;
+            p{
+                margin: 0;
+                font-size: smaller;
+                font-weight: 400;
+                text-align: center;
+            }
+        }
+
+        .sun-status{
+            display: flex;
+            gap: 1em;
+            padding-left: 24px;
+            div{
+                p:first-child{
+                    margin: 0;
+                    font-size: smaller;
+                    font-weight: 300;
+                }
+                p:nth-child(2){
+                    margin: 0;
+                    font-size: smaller;
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
