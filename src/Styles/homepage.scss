@@ -141,4 +141,39 @@
             text-align: right;
         }    
     }
+
+    .additional-details{
+        .d-flex{
+            justify-content: center;
+            align-items: center;
+            p{
+                font-weight: 600;
+            }
+            p:nth-child(2){
+                font-weight: 300;
+                font-size: smaller;
+            }
+        }
+        p{
+            margin: 0;
+        }
+        .details{
+            display: grid;
+            gap: 5px;
+            padding-left: 20px;
+            border-left: 2px solid orangered;
+            width: 85%;
+            margin: auto;
+            div{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1em;
+
+                span{
+                    font-weight: 300;
+                    font-size: smaller;
+                }
+            }
+        }
+    }
 }

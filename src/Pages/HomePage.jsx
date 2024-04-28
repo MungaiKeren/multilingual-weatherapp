@@ -160,7 +160,7 @@ export default function HomePage() {
           </div>
   
           <div className="col-md-6 mt-4">
-            <DailyForecast />
+            <DailyForecast capitalize={capitalize} mToKM={mToKM}/>
           </div>
         </div>
       </div>
