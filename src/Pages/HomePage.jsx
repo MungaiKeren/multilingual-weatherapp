@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { WeatherContext } from "../Components/Contexts/WeatherContext";
 
 import Header from "../Components/Header";
@@ -84,7 +84,7 @@ export default function HomePage() {
   return (
     <>
       <Header />  
-      {console.log(weatherData)}
+      {/* {console.log(weatherData)} */}
       <div className="container card my-5">
         <ToastContainer />
         <div className="row p-3">
