@@ -19,7 +19,7 @@ const WeatherContextProvider = ({ children }) => {
           `${apiUrl}/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely&appid=${apiKey}`
         );
         if (!response.ok) {
-          throw new Error('Failed to fetch weather data');
+          throw new Error('Failed to fetch weather data');          
         }
         const data = await response.json();
         setWeatherData(data);
