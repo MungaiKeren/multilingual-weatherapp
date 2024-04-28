@@ -14,6 +14,7 @@ import {
   faTemperatureThreeQuarters,
   faCloudRain,
   faLocationArrow,
+  faGaugeHigh
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function HomePage() {
@@ -76,18 +77,21 @@ export default function HomePage() {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  function mToKM(meters) {
+    return (meters / 1000).toFixed(1); // Convert meters to kilometers with 2 decimal places
+  }
+
   return (
     <>
+      <Header />  
       {console.log(weatherData)}
-      <Header />
-
       <div className="container card my-5">
         <ToastContainer />
         <div className="row p-3">
           <div className="col-md-5">
             {weatherData ? (
               <div className="top">
-                <p className="text-danger">
+                <p>
                   {formatUnixTimestamp(weatherData?.current.dt)}
                 </p>
                 <h5>
@@ -99,12 +103,14 @@ export default function HomePage() {
                   <span className="text-muted">Nairobi, Kenya</span>
                 </h5>
               </div>
+            ) : error ? (
+              <p className="text-danger">Error fetching weather data. Please try again later.</p>
             ) : (
               <Loading />
             )}
-
-            <div className="summary-box">
-              {weatherData ? (
+  
+            {weatherData && (
+              <div className="summary-box">
                 <div className="temp">
                   <h1>
                     <img
@@ -126,24 +132,32 @@ export default function HomePage() {
                       : "Breezy"}
                   </p>
                 </div>
-              ) : (
-                <Loading />
-              )}
-              <div className="other">
-                <span>
-                  <FontAwesomeIcon icon={faCloudRain} />{" "}
-                  {weatherData?.current.rain["1h"]}
-                </span>
-                <span>
-                  <FontAwesomeIcon icon={faLocationArrow} />
-                  {weatherData?.current.wind_speed} m/s
-                </span>
-                <span>Humidity: {weatherData?.current.humidity} %</span>
+                <div className="other">
+                  <div>
+                    <span>
+                      <FontAwesomeIcon icon={faCloudRain} />{" "}
+                      {weatherData?.current.rain["1h"]}
+                    </span>&nbsp;&nbsp;&nbsp;
+                    <span>
+                      <FontAwesomeIcon icon={faLocationArrow} />&nbsp;
+                      wind speed: {weatherData?.current.wind_speed} m/s
+                    </span>
+                  </div>
+                  <div>
+                    <span>Humidity: {weatherData?.current.humidity} %</span> &nbsp;&nbsp;
+                    <span><FontAwesomeIcon icon={faGaugeHigh} /> {weatherData.current.pressure} hPa</span>&nbsp;&nbsp;
+                    <span>UV: {weatherData?.current.uvi}</span>
+                  </div>                  
+                  <div>                    
+                    <span>Dew point: {weatherData?.current.dew_point}</span> &nbsp;&nbsp;
+                    <span>Visibility: {mToKM(weatherData?.current.visibility)} KMs</span>
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
-
-          <div className="col-md-7">
+  
+          <div className="col-md-7 mt-4">
             <HourlyForecast />
             <br />
             <TendayForecast />
@@ -172,6 +186,7 @@ export default function HomePage() {
       </div>
     </>
   );
+  
 }
 
 const BoxItem = (props) => {
