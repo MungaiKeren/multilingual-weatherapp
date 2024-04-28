@@ -134,20 +134,20 @@ export default function HomePage() {
                     <span>
                       <FontAwesomeIcon icon={faCloudRain} />{" "}
                       {weatherData?.current.rain["1h"]}
-                    </span>&nbsp;&nbsp;&nbsp;
+                    </span>
                     <span>
                       <FontAwesomeIcon icon={faLocationArrow} />&nbsp;
-                      wind speed: {weatherData?.current.wind_speed} m/s
+                      {t("Wind")}: {weatherData?.current.wind_speed} m/s
                     </span>
                   </div>
                   <div>
-                    <span>Humidity: {weatherData?.current.humidity} %</span> &nbsp;&nbsp;
-                    <span><FontAwesomeIcon icon={faGaugeHigh} /> {weatherData.current.pressure} hPa</span>&nbsp;&nbsp;
+                    <span>{t("Humidity")}: {weatherData?.current.humidity} %</span> 
+                    <span><FontAwesomeIcon icon={faGaugeHigh} /> {t("Pressure")}:  {weatherData.current.pressure} hPa</span>
                     <span>UV: {weatherData?.current.uvi}</span>
                   </div>                  
                   <div>                    
-                    <span>Dew point: {weatherData?.current.dew_point}</span> &nbsp;&nbsp;
-                    <span>Visibility: {mToKM(weatherData?.current.visibility)} KMs</span>
+                    <span>{t("Dew")}: {weatherData?.current.dew_point}</span> 
+                    <span>{t("Visibility")}: {mToKM(weatherData?.current.visibility)} KMs</span>
                   </div>
                 </div>
               </div>

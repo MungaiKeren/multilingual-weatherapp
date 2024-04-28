@@ -142,7 +142,7 @@ export default function DailyForecast(props) {
                           <FontAwesomeIcon icon={faLocationArrow} />
                           &nbsp; {forecast.wind_speed} m/s
                         </span>
-                        <span>Humidity: {forecast.humidity} %</span>
+                        <span>{t("Humidity")}: {forecast.humidity} %</span>
                       </div>
                       <div>
                         <span>
@@ -151,7 +151,7 @@ export default function DailyForecast(props) {
                           {weatherData.current.pressure} hPa
                         </span>
                         <span>UV: {forecast.uvi}</span>
-                        <span>Dew point: {forecast.dew_point}</span>
+                        <span>{t("Dew")}: {forecast.dew_point}</span>
                       </div>
                     </div>
 
@@ -185,11 +185,11 @@ export default function DailyForecast(props) {
 
                     <div className="sun-status mt-3">
                       <div>
-                        <p className="text-muted">SUNRISE</p>
+                        <p className="text-muted">{t("Sunrise")}</p>
                         <p>{formatTime(forecast.sunrise)}</p>
                       </div>
                       <div>
-                        <p className="text-muted" >SUNSET</p>
+                        <p className="text-muted" >{t("Sunset")}</p>
                         <p>{formatTime(forecast.sunset)}</p>
                       </div>
                     </div>
@@ -201,7 +201,7 @@ export default function DailyForecast(props) {
           })
         ) : error ? (
           <p className="text-danger">
-            Error fetching weather data. Please try again later.
+            {t("Error")}
           </p>
         ) : (
           <Loading />

@@ -4,11 +4,11 @@
   "Hourly": "Utabiri wa Kila Saa",
   "8-days": "Utabiri wa Siku 8",
   "Feels-Like": "Inahisi Kama",
-  "Humidity": "Humidity",
-  "Wind": "Wind",
-  "Pressure": "Pressure",
-  "Visibility": "Visibility",
-  "Sunrise": "Sunrise",
-  "Sunset": "Sunset",
-  "Dew point": "Dew point"
+  "Humidity": "Unyevu",
+  "Wind": "Kasi ya upepo",
+  "Pressure": "Shinikizo",
+  "Visibility": "Mwonekano",
+  "Sunrise": "Kuchomoza kwa jua",
+  "Sunset": "Machweo",
+  "Dew": "Kiwango cha umande"
 }

@@ -5,10 +5,10 @@
   "8-days": "8-days Forecast",
   "Feels-Like": "Feels Like",
   "Humidity": "Humidity",
-  "Wind": "Wind",
+  "Wind": "Wind Speed",
   "Pressure": "Pressure",
   "Visibility": "Visibility",
   "Sunrise": "Sunrise",
   "Sunset": "Sunset",
-  "Dew point": "Dew point"
+  "Dew": "Dew point"
 }

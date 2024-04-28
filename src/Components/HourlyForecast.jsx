@@ -90,7 +90,7 @@ export default function HourlyForecast(props) {
             </span>
           </div>
           <div>
-            <span>Humidity: {hourlyForecasts[active].humidity} %</span>
+            <span>{t("Humidity")}: {hourlyForecasts[active].humidity} %</span>
             <span>
               <FontAwesomeIcon icon={faGaugeHigh} />&nbsp;&nbsp;
               {weatherData.current.pressure} hPa
@@ -98,9 +98,9 @@ export default function HourlyForecast(props) {
             <span>UV: {hourlyForecasts[active].uvi}</span>
           </div>
           <div>
-            <span>Dew point: {hourlyForecasts[active].dew_point}</span>
+            <span>{t("Dew")}: {hourlyForecasts[active].dew_point}</span>
             <span>
-              Visibility: {props.mToKM(hourlyForecasts[active].visibility)} KMs
+            {t("Visibility")}: {props.mToKM(hourlyForecasts[active].visibility)} KMs
             </span>
           </div>
         </div>
