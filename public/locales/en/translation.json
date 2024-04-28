@@ -10,5 +10,29 @@
   "Visibility": "Visibility",
   "Sunrise": "Sunrise",
   "Sunset": "Sunset",
-  "Dew": "Dew point"
+  "Dew": "Dew point",
+  "Temperature": "TEMP",
+  "Morning": "Morning",
+  "Afternoon": "Afternoon",
+  "Evening": "Evening",
+  "Night": "Night",
+
+  "High": "The high will be",
+  "Low": "The low will be",
+
+  "Monday": "Mon",
+  "Tuesday": "Tue",
+  "Wednesday": "Wed",
+  "Thursday": "Thu",
+  "Friday": "Fri",
+  "Saturday": "Sat",
+  "Sunday": "Sun",
+
+  "WeatherDescription": "{{weatherDescription}}",
+
+  "Breezy": "Breezy",
+  "Calm": "Calm",
+  "Windy": "Windy",
+  "LightBreezy": "Light Breeze"
+
 }

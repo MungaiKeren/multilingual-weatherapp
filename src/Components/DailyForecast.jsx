@@ -119,14 +119,14 @@ export default function DailyForecast(props) {
                         <p>
                           {props.capitalize(forecast.weather[0].description)}.{" "}
                           {forecast.wind_speed < 1.0
-                            ? "Calm"
+                            ? `${t("Calm")}`
                             : forecast.wind_speed >= 6.0
-                            ? "Windy"
-                            : "Light Breeze"}
+                            ? `${t("Windy")}`
+                            : `${t("LightBreezy")}`}
                         </p>
                         <p>
-                          The High will be {Math.trunc(forecast.temp.max)}
-                          &deg;C, the low will be{" "}
+                          {t("High")} {Math.trunc(forecast.temp.max)}
+                          &deg;C, {t("Low")}{" "}
                           {Math.trunc(forecast.temp.min)}&deg;C
                         </p>
                       </div>
@@ -158,26 +158,26 @@ export default function DailyForecast(props) {
                     <div className="feels-like mt-2">
                       <div>
                         <p>*</p>
-                        <p className="text-muted">TEMP</p>
-                        <p className="text-muted">FEELS LIKE</p>
+                        <p className="text-muted">{t("Temperature")}</p>
+                        <p className="text-muted">{t("Feels-Like")}</p>
                       </div>
                       <div>
-                        <p>Morning</p>
+                        <p>{t("Morning")}</p>
                         <p>{Math.trunc(forecast.temp.morn)}&deg;C</p>
                         <p>{Math.trunc(forecast.feels_like.morn)}&deg;C</p>
                       </div>
                       <div>
-                        <p>Afternoon</p>
+                        <p>{t("Afternoon")}</p>
                         <p>{Math.trunc(forecast.temp.day)}&deg;C</p>
                         <p>{Math.trunc(forecast.feels_like.day)}&deg;C</p>
                       </div>
                       <div>
-                        <p>Evening</p>
+                        <p>{t("Evening")}</p>
                         <p>{Math.trunc(forecast.temp.eve)}&deg;C</p>
                         <p>{Math.trunc(forecast.feels_like.eve)}&deg;C</p>
                       </div>
                       <div>
-                        <p>Night</p>
+                        <p>{t("Night")}</p>
                         <p>{Math.trunc(forecast.temp.night)}&deg;C</p>
                         <p>{Math.trunc(forecast.feels_like.night)}&deg;C</p>
                       </div>

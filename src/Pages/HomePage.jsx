@@ -79,6 +79,8 @@ export default function HomePage() {
     return (meters / 1000).toFixed(1); // Convert meters to kilometers with 2 decimal places
   }
 
+  // const weatherDescription = capitalize(weatherData?.current.weather[0].description);
+
   return (
     <>
       <Header />
@@ -117,16 +119,15 @@ export default function HomePage() {
                     {Math.trunc(weatherData.current.temp)}&deg;
                   </h1>
                   <p className="text-bold">
-                    {" "}
                     {t("Feels-Like")} {Math.trunc(weatherData.current.feels_like)}&deg;
                     &nbsp;
-                    {capitalize(weatherData.current.weather[0].description)}
+                    {t("WeatherDescription", { weatherDescription: capitalize(weatherData?.current.weather[0].description) })}
                     .&nbsp;
                     {weatherData.current.wind_speed < 1.0
-                      ? "Calm"
+                      ? `${t("Calm")}`
                       : weatherData.current.wind_speed >= 6.0
-                      ? "Windy"
-                      : "Breezy"}
+                      ? `${t("Windy")}`
+                      : `${t("Breezy")}`}
                   </p>
                 </div>
                 <div className="details">
