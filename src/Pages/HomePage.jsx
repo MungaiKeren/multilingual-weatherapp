@@ -3,7 +3,7 @@ import { WeatherContext } from "../Components/Contexts/WeatherContext";
 
 import Header from "../Components/Header";
 import HourlyForecast from "../Components/HourlyForecast";
-import TendayForecast from "../Components/TendayForecast";
+import DailyForecast from "../Components/DailyForecast";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loading from "../Components/Loading";
@@ -87,7 +87,7 @@ export default function HomePage() {
       <div className="container card my-5">
         <ToastContainer />
         <div className="row p-3">
-          <div className="col-md-5">
+          <div className="col-md-6">
             {weatherData ? (
               <div className="top">
                 <p>
@@ -155,13 +155,12 @@ export default function HomePage() {
               </div>
             )}
 
-            
+            <br />
+            <HourlyForecast mToKM={mToKM}/>
           </div>
   
-          <div className="col-md-7 mt-4">
-            <HourlyForecast mToKM={mToKM}/>
-            <br />
-            <TendayForecast />
+          <div className="col-md-6 mt-4">
+            <DailyForecast />
           </div>
         </div>
       </div>

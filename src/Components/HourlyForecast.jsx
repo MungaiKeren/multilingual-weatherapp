@@ -38,7 +38,6 @@ export default function HourlyForecast(props) {
 
   return (
     <div className="hourly-forecast">
-      {console.log(hourlyForecasts)}
       <h4>
         <FontAwesomeIcon icon={faClock} /> Hourly Forecast
       </h4>
