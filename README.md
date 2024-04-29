@@ -17,6 +17,11 @@ This project is a multilingual weather dashboard designed to provide real-time w
 3. Start the application with `npm start`.
 4. Access the dashboard in your web browser and enjoy real-time weather updates for Nairobi!
 
+## Running Tests
+To run tests for this project, follow these steps:
+1. Ensure that all dependencies are installed by running `npm install`.
+2. Run the test suite using the following command `npm test`
+
 ## Technologies Used:
 - React Js
 - OpenWeatherMap One Call API 3.0 API
