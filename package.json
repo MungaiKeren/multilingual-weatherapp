@@ -2,7 +2,6 @@
   "name": "multilingual-weatherapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mungaikeren.github.io/multilingual-weatherapp/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
