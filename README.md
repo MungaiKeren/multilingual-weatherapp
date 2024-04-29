@@ -13,3 +13,13 @@ This project is a multilingual weather dashboard designed to provide real-time w
 * OpenWeatherMap API Integration
     Utilizes the OpenWeatherMap One Call API 3.0 API  to fetch current weather data for Nairobi, ensuring accurate and up-to-date information.
 * Intuitive Interface
+
+## Usage
+* Clone the repository
+* Install dependencies using `npm install`.
+* Start the application with `npm start`.
+* Access the dashboard in your web browser and enjoy real-time weather updates for Nairobi!
+
+## Technologies Used:
+- React Js
+- OpenWeatherMap One Call API 3.0 API
