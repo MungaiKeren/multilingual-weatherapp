@@ -31,7 +31,7 @@ const WeatherContextProvider = ({ children }) => {
     };
 
     fetchData();
-  }, []);
+  }, [apiKey]);
 
   return (
     <WeatherContext.Provider value={{ weatherData, error }}>

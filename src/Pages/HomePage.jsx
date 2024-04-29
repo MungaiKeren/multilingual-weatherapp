@@ -123,7 +123,6 @@ export default function HomePage() {
                     {t("Feels-Like")} {Math.trunc(weatherData.current.feels_like)}&deg;
                     &nbsp;
                     {capitalize(weatherData?.current.weather[0].description)}
-                    {/* {t("WeatherDescription", { weatherDescription: capitalize(weatherData?.current.weather[0].description) })} */}
                     .&nbsp;
                     {weatherData.current.wind_speed < 1.0
                       ? `${t("Calm")}`
