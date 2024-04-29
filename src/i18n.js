@@ -20,9 +20,9 @@ i18n
     interpolation: {
       escapeValue: false, // no need for react. it escapes by default
     },
-    // backend: {
-    //   loadPath: "/locales/{{lng}}/{{ns}}.json",
-    // },
+    backend: {
+      loadPath: "locales/{{lng}}/{{ns}}.json", // Path to the json files
+    },
   });
 
 export default i18n;
