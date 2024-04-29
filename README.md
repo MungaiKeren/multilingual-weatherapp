@@ -15,10 +15,10 @@ This project is a multilingual weather dashboard designed to provide real-time w
 * Intuitive Interface
 
 ## Usage
-* Clone the repository
-* Install dependencies using `npm install`.
-* Start the application with `npm start`.
-* Access the dashboard in your web browser and enjoy real-time weather updates for Nairobi!
+1. Clone the repository
+2. Install dependencies using `npm install`.
+3. Start the application with `npm start`.
+4. Access the dashboard in your web browser and enjoy real-time weather updates for Nairobi!
 
 ## Technologies Used:
 - React Js
