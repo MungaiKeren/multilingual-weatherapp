@@ -19,14 +19,10 @@
     "Night": "Usiku",
     "High": "Ya Juu itakuwa",
     "Low": "ya chini itakuwa",
-
     "Breezy": "Upepo",
     "Calm": "utulivu",
     "LightBreezy": "Upepo mwepesi",
     "Windy": "Upepo mkali",
-
-    "WeatherDescription": "{{weatherDescription}}",
-
     "Monday": "Jumatatu",
     "Tuesday": "Jumanne",
     "Wednesday": "Jumatano",

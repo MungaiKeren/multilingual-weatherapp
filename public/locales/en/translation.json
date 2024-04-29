@@ -17,10 +17,8 @@
   "Afternoon": "Afternoon",
   "Evening": "Evening",
   "Night": "Night",
-
   "High": "The high will be",
   "Low": "The low will be",
-
   "Monday": "Mon",
   "Tuesday": "Tue",
   "Wednesday": "Wed",
@@ -28,9 +26,6 @@
   "Friday": "Fri",
   "Saturday": "Sat",
   "Sunday": "Sun",
-
-  "WeatherDescription": "{{weatherDescription}}",
-
   "Breezy": "Breezy",
   "Calm": "Calm",
   "Windy": "Windy",
