@@ -133,11 +133,12 @@ export default function DailyForecast(props) {
                     </div>
                     <div className="details mt-2 mb-2">
                       <div>
+                        {forecast.rain &&
                         <span>
                           <FontAwesomeIcon icon={faCloudRain} />
                           &nbsp;&nbsp;
                           {forecast.rain} mm
-                        </span>
+                        </span>}
                         <span>
                           <FontAwesomeIcon icon={faLocationArrow} />
                           &nbsp; {forecast.wind_speed} m/s

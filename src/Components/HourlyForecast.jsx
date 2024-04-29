@@ -80,10 +80,12 @@ export default function HourlyForecast(props) {
         <div className="details">
           <div>
             <span>{t("Feels-Like")}: {hourlyForecasts[active].feels_like} &deg;</span>
+            {hourlyForecasts[active].rain && 
             <span>
               <FontAwesomeIcon icon={faCloudRain} />&nbsp;&nbsp;
               {hourlyForecasts[active].rain["1h"]}
-            </span>            
+            </span>
+              }    
             <span>
               <FontAwesomeIcon icon={faLocationArrow} />
               &nbsp; {hourlyForecasts[active].wind_speed} m/s

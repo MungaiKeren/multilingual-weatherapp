@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
+// import { useTranslation } from "react-i18next";
 
 const WeatherContext = createContext();
 
@@ -6,17 +7,16 @@ const WeatherContextProvider = ({ children }) => {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
 
-  const apiUrl = process.env.REACT_APP_API_URL;
-  const apiKey = process.env.REACT_APP_API_KEY;
+  // const { t } = useTranslation();
 
-  const lat = -1.283;
-  const lon = 36.817;
+  // const apiKey = process.env.REACT_APP_API_KEY;
+
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `${apiUrl}/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely&appid=${apiKey}`
+          `https://api.openweathermap.org/data/3.0/onecall?lat=-1.283&lon=36.817&units=metric&exclude=minutely&appid=2570c83942621900fde187b9ff3ad5a5`
         );
         if (!response.ok) {
           throw new Error('Failed to fetch weather data');          

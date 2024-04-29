@@ -1,6 +1,7 @@
 {
   "Title": "Weather App",
-  "Error": "Error fetching weather data. Please try again later.",
+  "Error": "Error fetching weather data.",
+  "TryAgain": "Failed to fetch weather data. Please try again later.",
   "Hourly": "Hourly Forecast",
   "8-days": "8-days Forecast",
   "Feels-Like": "Feels Like",

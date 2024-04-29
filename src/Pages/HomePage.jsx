@@ -23,7 +23,8 @@ export default function HomePage() {
 
   useEffect(() => {
     if (error) {
-      toast.error(error.message, {
+      console.log(error.message);
+      toast.error("Please Try again Later", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -132,10 +133,10 @@ export default function HomePage() {
                 </div>
                 <div className="details">
                   <div>
-                    <span>
+                    {weatherData?.current.rain && <span>
                       <FontAwesomeIcon icon={faCloudRain} />{" "}
                       {weatherData?.current.rain["1h"]}
-                    </span>
+                    </span>}
                     <span>
                       <FontAwesomeIcon icon={faLocationArrow} />&nbsp;
                       {t("Wind")}: {weatherData?.current.wind_speed} m/s

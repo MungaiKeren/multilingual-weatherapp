@@ -1,6 +1,7 @@
 {
     "Title": "Programu ya hali ya hewa",
-    "Error": "Hitilafu katika kuleta data ya hali ya hewa. Tafadhali jaribu tena baadae.",
+    "Error": "Hitilafu katika kuleta data ya hali ya hewa.",
+    "TryAgain": "Hitilafu katika kuleta data ya hali ya hewa. Jaribu tena baadae",
     "Hourly": "Utabiri wa Kila Saa",
     "8-days": "Utabiri wa siku 8",
     "Feels-Like": "Inahisi Kama",
