@@ -16,7 +16,7 @@ export default function HourlyForecast(props) {
 
   const { t } = useTranslation()
 
-  const hourlyForecasts = weatherData?.hourly.slice(0, 6);
+  const hourlyForecasts = weatherData?.hourly.slice(1, 7);
 
   function formatHour(timestamp) {
     const milliseconds = timestamp * 1000;
