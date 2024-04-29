@@ -9,14 +9,14 @@ const WeatherContextProvider = ({ children }) => {
 
   // const { t } = useTranslation();
 
-  // const apiKey = process.env.REACT_APP_API_KEY;
+  const apiKey = process.env.REACT_APP_API_KEY;
 
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://api.openweathermap.org/data/3.0/onecall?lat=-1.283&lon=36.817&units=metric&exclude=minutely&appid=2570c83942621900fde187b9ff3ad5a5`
+          `https://api.openweathermap.org/data/3.0/onecall?lat=-1.283&lon=36.817&units=metric&exclude=minutely&appid=${apiKey}`
         );
         if (!response.ok) {
           throw new Error('Failed to fetch weather data');          
