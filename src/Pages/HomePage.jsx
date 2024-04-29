@@ -122,7 +122,8 @@ export default function HomePage() {
                   <p className="text-bold">
                     {t("Feels-Like")} {Math.trunc(weatherData.current.feels_like)}&deg;
                     &nbsp;
-                    {t("WeatherDescription", { weatherDescription: capitalize(weatherData?.current.weather[0].description) })}
+                    {capitalize(weatherData?.current.weather[0].description)}
+                    {/* {t("WeatherDescription", { weatherDescription: capitalize(weatherData?.current.weather[0].description) })} */}
                     .&nbsp;
                     {weatherData.current.wind_speed < 1.0
                       ? `${t("Calm")}`
