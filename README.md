@@ -1,9 +1,6 @@
 # Multilingual Weather Dashboard
-A simple multilingual weather dashboard using React.
-#### By 
-* Mungai Keren
-#### Email:
- wambukeren@gmail.com
+A simple multilingual weather dashboard using ReactJs.
+
 ## Description
 This project is a multilingual weather dashboard designed to provide real-time weather updates for Nairobi, Kenya. The dashboard supports both English and Kiswahili languages, ensuring accessibility to a wider audience.
 
@@ -23,3 +20,8 @@ This project is a multilingual weather dashboard designed to provide real-time w
 ## Technologies Used:
 - React Js
 - OpenWeatherMap One Call API 3.0 API
+
+## Contributors
+- [Mungai Keren](mailto:wambukeren@gmail.com)
+
+Feel free to contribute to this project by submitting pull requests or reporting any issues you encounter!
